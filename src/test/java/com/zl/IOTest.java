@@ -42,9 +42,10 @@ public class IOTest {
     }
 
     @Test
-    public void ob(){
+
+
+    public void test(){
         Object object = new Object();
-        //System.out.println((char)('A'+1));
 
     }
 

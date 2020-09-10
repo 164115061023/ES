@@ -98,7 +98,7 @@ class EsApplicationTests {
      */
     @Test
     void addDocument(){
-        User user = new User(1,"zhulei",22);
+        User user = new User(1L,"zhulei",22);
 
         //创建请求
         IndexRequest request = new IndexRequest("zhulei");
@@ -142,7 +142,7 @@ class EsApplicationTests {
     void updateDocument(){
         UpdateRequest request = new UpdateRequest("zhulei","1");
         User user = new User();
-        user.setName("fz");
+        user.setUsername("fz");
         user.setAge(2);
         request.doc(JSON.toJSONString(user),XContentType.JSON);
         try {
@@ -177,11 +177,11 @@ class EsApplicationTests {
         BulkRequest request = new BulkRequest("zhulei");
 
         List<User> userList = new ArrayList<>();
-        userList.add(new User(1,"zhulei1",22));
-        userList.add(new User(2,"zhulei2",22));
-        userList.add(new User(3,"zhulei3",22));
-        userList.add(new User(4,"zhulei4",22));
-        userList.add(new User(5,"zhulei5",22));
+        userList.add(new User(1L,"zhulei1",22));
+        userList.add(new User(2L,"zhulei2",22));
+        userList.add(new User(3L,"zhulei3",22));
+        userList.add(new User(4L,"zhulei4",22));
+        userList.add(new User(5L,"zhulei5",22));
 
         for (int i = 0; i <userList.size() ; i++) {
             request.add(
