@@ -10,7 +10,7 @@ public class SensitiveWordFilter implements Filter{
     @Override
     public void doFilter(Msg msg) {
         String s = msg.getMsg();
-        s = s.replaceAll("007", "996");
+        s = s.replaceAll("草", "*");
         msg.setMsg(s);
     }
 }

@@ -1,13 +1,13 @@
-package com.zl.chainOfResponsibility;
+package com.zl.chainOfResponsibility.servlet;
 
 /**
  * @Description
  * @Author zl
- * @Date 2020/9/14 17:34
+ * @Date 2020/9/15 14:06
  * @Version 1.0
  */
-public class Msg {
-    private String msg;
+public class Response {
+    String msg;
 
     public String getMsg() {
         return msg;
@@ -19,7 +19,7 @@ public class Msg {
 
     @Override
     public String toString() {
-        return "Msg{" +
+        return "Response{" +
                 "msg='" + msg + '\'' +
                 '}';
     }

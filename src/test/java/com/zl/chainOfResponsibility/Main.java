@@ -9,10 +9,9 @@ package com.zl.chainOfResponsibility;
 public class Main {
     public static void main(String[] args) {
         Msg msg = new Msg();
-        msg.setMsg("123456789<script>:)007");
-        new CharFilter().doFilter(msg);
-        new SensitiveWordFilter().doFilter(msg);
-        new FaceFilter().doFilter(msg);
+        msg.setMsg("<p>你好我是某某某</p>，我的个人网站是xxxxxx.com,草");
+        FilterChain chain = new FilterChain();
+        chain.doFilter(msg);
         System.out.println(msg);
     }
 }

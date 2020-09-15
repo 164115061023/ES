@@ -1,4 +1,4 @@
-package com.zl.chainOfResponsibility;
+package com.zl.chainOfResponsibility.servlet;
 
 /**
  * @Description
@@ -6,7 +6,7 @@ package com.zl.chainOfResponsibility;
  * @Date 2020/9/14 17:34
  * @Version 1.0
  */
-public class Msg {
+public class Request {
     private String msg;
 
     public String getMsg() {
