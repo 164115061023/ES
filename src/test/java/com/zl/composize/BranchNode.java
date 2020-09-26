@@ -13,6 +13,7 @@ public class BranchNode extends Node{
     public void print() {
         System.out.println(name);
     }
+    @Override
     public void add(Node node) {
         nodes.add(node);
     }

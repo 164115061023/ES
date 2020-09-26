@@ -11,7 +11,6 @@ public class Main {
         LeafNode leafNode3 = new LeafNode("2-1-1-1");
         LeafNode leafNode4 = new LeafNode("2-1-1-2");
 
-
         root.add(branchNode1);
         root.add(branchNode2);
         branchNode1.add(leafNode1);
@@ -20,17 +19,18 @@ public class Main {
         branchNode3.add(leafNode3);
         branchNode3.add(leafNode4);
 
-        tree(root);
-
-
+        tree(root, 0);
     }
 
-    public static void tree(Node node) {
+    public static void tree(Node node, int depth) {
+        for (int i = 0; i < depth; i++) {
+            System.out.print("--");
+        }
         node.print();
         if (node instanceof BranchNode) {
             BranchNode branchNode = (BranchNode)node;
             for (Node branchNode1: branchNode.nodes)
-                tree(branchNode1);
+                tree(branchNode1, depth+1);
         }
     }
 }
