@@ -7,6 +7,8 @@ import javax.servlet.http.HttpServletRequest;
 
 public class CookieTest {
     public static void main(String[] args) {
-        
+        Long a = 10L;
+        Long b = new Long(10);
+        System.out.println(a.equals(b));
     }
 }
